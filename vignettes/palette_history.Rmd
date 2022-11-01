@@ -1,0 +1,21 @@
+---
+title: "Palettes by version"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Palettes by version}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.height = 1.6,
+  fig.width = 5
+)
+library(gglgbtq)
+options(gglgbtq_font_size = 1.7)
+```
+
+

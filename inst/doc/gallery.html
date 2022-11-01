@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Palette gallery</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Palette gallery</h1>
+
+
+
+<div id="the-most-common-flags" class="section level2">
+<h2>The most common flags</h2>
+<p>There are a few flags and related identities within LGBT+ community
+that are more recognizable than the others. Here are the selected ones
+that are the most well-known. For other flags, check the other
+sections.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;rainbow&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABJlBMVEUAAAAAACwAAC0AAE0AAFEAMVEAMXEANiwANk0ANm0AWJAAYIsAgCYkQI4sAAAsMS0sMVEsWFEsWJAse604AAA4Niw4YE04YG04h4s4h6dNAABNMS1Ne3FNe5BNnK1NnMliAABiNixiYABiYCxiYE1ih4tirMJtMQBtWC1te1FtnK1tvMlzKYKKNgCKrG2KrKeKz8KLWACLWC2LnFGLvHGLvK2L28mney2nnFGnnHGnvHGn25Cn28mvYACvYCyvhyyvh02vrG2vrKevz6evz8Kv8aev8cLCnFHCvHHCvJDC25DC263C28nJzt7ShyzSrE3SrG3Sz4vS8cLZytzkAwPvwsL1rE31z231z4v1z6f13sL18Yv18af18cL19fX/jAD/7QD///+C1BKCAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD30lEQVR4nO3ce3NTRRgH4KVoKUUDkqgQ5Q5VxAsRsCo35dYSw8WqRSXx8v2/hLt7TtNETAnOIU3PPL8/ck4205nOPPO+u+fNTMLfUuuE3f4H5PUGcM2TgH+uNn9Wm78qzVvV5u1q82m1AQwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMOC9CfxLtfm92gwqTa/aPKo2P1WbPwADBgwYMGDAgAEDBgwYMGDANQF+1gorLyw+b4cmYMCA9wDwfwYwYMCAAc8S+Flr//1bISxdHgx+++7dEMK+9+8V62kPTq+/nomrxWICfvhxCAtHb5RE33wQPzzySbz74aOw3Bu59tbKK+DdBj4bjfY/GGy2QpmVUeDzxfK+ywXwO438duFSxvyy/IsEvhoWE/t6I7zxVfqwE04BngfgEI5t9O8Mnp8OB2OZ9p+0kvY2cFi6O+jfDuFQARwWTvZ6XzcKzE6mTczLqWIz7Fqp320XzoB3HfjgRrp5nF3zTarWIXCxejNfE3Auy1imza3XXireaNpt589WY0E3p+vQgGcDfHx8ZXMc+Hi5WAIvFrtvJ92sls042TbTWjNtwQsXM21nivMY4JkAjww0+j9+fy6MA6+MqG+fopPt8Dg19I4vsTNfbcRrhL4EeL6An54pj0w7AZcHp7XYlCPwVpFm2/VGLOjYmbPtemPxxkRYwLsBfDPbvvfFk2mBu+0R4GibN+HVuNYpr4DnCfhxfNi9u235Pyo4bbtx7dSwigHPEXD/s/wgNHjhFD39HhxhF6+nh6PYnr+dpkMDniFwfAwuzstReifg5S3R5d6/T9FpE75SHrQuTjXTBDw74GEFb+58yCo671p+Hh5/Ds5TysN5pbM16gI8N8DpjHVsY9C/Vc4qJwFPnmT1iiFHOeyYpkMDniVw7NE5S5/n4cYk4A+LWfSbuTePzaKLws5NO5b2y8dYgGcLHIu3FcKBCxtFs554is7fJp0Y/zbpWvmuW066uu2Xf9EAeDbAr5Zp1F4hgAEDBgwYMGDAgAEDriewH2Gp+Y+wAAYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGPDeApYaB3DNA7jmAVzz/ANFUQlE5XTVXwAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>The flag of LGBT+ community, sometimes incorrectly associated with
+gay men only. Adopted in 1979 after revisions made to the original
+design with eight stripes reduced the number of colors to six. The one
+you’ll see most often, since it encompasses everyone in LGBT+ community,
+no exceptions.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;lesbian&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAAAulBMVEUAAAAAADgAAGIAODgAOGIAOIoAYq84AAA4OAA4ODg4OGI4YmI4Yoo4Yq84iq84itJiAABiOABiODhiYjhiYmJiiopiiq9ir9Jir/WKOACKYjiKr4qKr9KK0vWlAGKvYgCvYjivijivimKvioqvr4qv0tKv0vWv9fXSijjSimLSr2LSr4rS0q/S0vXS9fXUYabWKQDjwtXsysLs1eP1r2L10or10q/10tL14dP19a/19dL19fX/m1X///97VMcmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADVUlEQVR4nO3caVMTMRwH4K0cqwJWUQERLR4IAuJVULv6/b+W2SRblmvkhTtu6/N7wfBPkxmGZ9McnWnxS+Y6xb/+A6TbAJ7z1MCfus3PTtPx/+djp3nZbQADBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgx4NoG/dJvvnabqNl87zeduUwEGDBgwYMCAAQMGDBgwYMCAZxD4tCy2/iD142ExbJW3GAEYMODeAt82gAEDBgz4bwEfrxdFcX8n68RqYeOkAT7bLorB2kl7xLfX90Kfweq7pvGsHpNKwL0D3i1SliLiQa7u7CfglTKWgxfnI8Zl7hOr0Pik1Qdw34CD6IOTavK+LJZTYz1bj1IVgIvBZlUdlpE/jQiNS2GyTkJj/RSExmJxr5q8KuIQwD0DDj83YzmOM/BgOpFrvBp4K/cdNiPSS7FPPeK0zPWoaQfcJ+BGtAZabulVeQ3Or47qXy5ty8YN8DCXgPsHPHk23SdH6nG9wfrQAh42Lwa9FvDk+O3jogHeankD7hdw/SY8TT0DR3G7tLrXAG+1ZmtjebSeBwCePeDq8G6y27wROD0DKzuHgGcC+MpVxuTNej4DXQsctt1pgo8B9x84rMHLl4HrpIPRdWvw+YgDwP0Hbh1u4uRt6YX2AJzLuMW+OOdDX8D9Bz4ts2GynR6TRnkGJ7Rxkfu2ZvDYJmsWgOstU32LfPwo+gTSxbDATnabNfjqTdYoXX3t5nUacM+BJ81d9CA6TS+a16oI/DTVi/tV66oyNT1vXW8B7i1wPtYurOXrjbPtcnoQrnfR8dOkjZMLj0QZP29Kb9aA+wrcXQADBgwYMGDAgAEDBvxfAvsSlpszF1/CAhgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCzBSxzHMBzHsBzHsBznt/9KmJxnzCxNQAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>Colors derived from the 2018 design with seven stripes, the third
+widespread design. “Lesbian” means “homosexual woman” and is one of the
+most known terms from the LGBT+ community. Me and my girlfriend can
+never remember which side goes on the top when positioning our pins.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;gay&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAAArlBMVEUAAAAAADgAAGIAODgAOGIAOIoAYq8HjXA4AAA4OAA4ODg4OGI4YmI4Yoo4Yq84iq84itI9GnhiAABiODhiYjhiYmJiiopiiq9iitJir9Jir/V7reKKOACKYjiKr4qKr9KK0vWY6MGvYgCvYjivimKvr4qv0tKv0vWv9fXD3tjOx9rSijjSr2LSr4rS0q/S9fXa5O/g8Oj1r2L10or10q/10tL19a/19dL19fX///9cQNTtAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADGUlEQVR4nO3ca3PSQBQG4EXbStVqrbfWu7SKCoqmWuL//2Pu5gKiQr6YMYnP+wUWMgzDwzmcLAzhuww64V8/AWk3gAeeBHyj3bxuNS2/Pk9bzb12AxgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMD9BH7fbr60mrzdfG41H9pNDhgwYMCAAQMGDBgwYMCAAQMeDvDy4jCEW9PL8ehVWn67uBlCGB1N4/Wrk3BcHhSvPQHcS+Dls1DkUQmcjUOVBDoJ+4viqCxcewe4l8CTMDpd5PPomoBjpe7H2l3GdRLNQlnW8aiDHY8BuLvAl+Oy98bLZDmrK3VWexc9eneHBtxh4FndhCd1sZaparfq0bs7NODuAsdP4IMN0eLGT28elB07r0av3R0acHeB13NyPUV/vF8NWcUyvgGOGzs04B4BTwrb2y/nVUEXLbyhQwPuD/AshKO3aVl37OLmhg4NuLvAv3wGr5ezCjj16HrSBtw/4PVWRjFFrwo6ulYzV+zR84YODbjDwJvnwasKzkINfHUyOmzo0IA7DJwq9yzOztVOVpyx7i7y5Xm9V5mXY9fuDg24y8DVXvToYb11VWTvxbievmIxN3RowF0Grr9Nqk6Fluexlq8/XqzHrfWgDbiHwM3fF2Wbe5iA+wX80+nQlklq9RYA3EfgOD3vTfP86/NtdTpvLmDAHQZOe1fllHX2hzuzdM+dJl/AXQaOxZvGquInOr8lnR2fNvoC7jTwXwhgwIABAwYMGDBgwID/S2B/wrI9g/gTFsCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQPuF7AMOIAHHsADD+CB5wfZTjPAMc2iQQAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>Sometimes “gay” is a synonym to “homosexual”, which would include
+lesbians, but this palette is based on a flag for MLM, men loving men,
+which is the other meaning of “gay”. The flag itself is inspired by the
+lesbian flag.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;bisexual&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Originally meant “attracted to both gender”; for gender is now known
+to be a spectrum (or perhaps multiple spectra), the meaning was updated
+to say “attracted to <em>two or more</em> genders”. “Bisexual” isn’t
+synonymical to “attracted to all” anymore, for that there are
+“omnisexual” and “pansexual” terms.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;transgender&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A transgender person is somebody whose gender doesn’t match AGAB
+(assigned gender at birth). It encompasses both binary and nonbinary
+gender identities (in fact, currently all nonbinary people are
+technically transgender, since most countries only allow one of the two
+binary genders to be assigned at birth). The opposite of “transgender”
+is “cisgender”.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;asexual&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABLFBMVEUAAAAAADMAADgAAFsAAGIAMzMAM1sAM4AAODgAOGIAOIoAW6EAYooAYq8zAAAzMwAzMzMzM1szW1szW4AzW6EzgKEzgMI4AAA4ODg4YmI4Yoo4Yq84iq84itJbAABbMwBbMzNbWzNbgKFbocJboeJiAABiOABiODhiYjhiiq9ir/WAMwCAWzOAoYCAocKAwuKBAIGKOACKYjiKr4qKr9KK0vWhWwChWzOhgFuhgIChoYChwsKhwuKh4uKkpKSvYgCvYjivimKvr2Kvr4qv0tKv0vWv9fXCgDPCgFvCoVvCoYDCwqHCwsLCwuLC4uLSijjSr2LSr4rS0q/S9fXbwtvioVviwoDiwqHiwsLi4qHi4sLi4uL1r2L10or10q/10tL19a/19dL19fX///9w7ZQSAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD/ElEQVR4nO3ce3NTRRgH4G0FIiLxQiWKF6q0qEVRvAQVtXitpdqCNVWSiCR+/+/g7p496XXGcUY8h/j8/miy2TOdTp6+e97dzCT8KXOd0PQfII82gOc8CTg0ki8bSUNv8/uNBDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIAfT+AfG8mokUybyS+NZAoYMGDAgAEDBgwYMGDAgAEDBpzyey+sAQYMGDBgwIAB/6+Bf/vk2RDCwoXPq+HWchydfmN7dGD43PX0dCOEV9P7vROi3oxwHBY/To9/fPVivHLx0neA2wU86NafMa8UxZwnvsizN8uwE8GH18Kp76fTh6vhqd1jwONe/WvWALcJ+P5roRNrd7jZzaZ73bAULe90w7nC/cL2aPhDNdzrhfPT6XoWPQKc1GPtTu728j8B4NYAb9S1uhEW3ks/O9v7L0fuK3lykCdHyXYckvJR4J3sOk1PDvEDbhp4lkEBLt4FvVPuxf1cwrFOn75RUR67B5eMAbcQeLj12eshAw9Sg/VT/fK1cPEQdeqvSqd1EvDk52/eCoDbBnxnuXRHeRXu52cXbqWZeH/eT6rs6eRGSB3WScD33iwXAm4XcCX6/PXNCni0+UylfeUk4FTCuYCPAa9n25c+ugu4XcCxT67KtfRRMcNPl6tdUwS+eOjiBFcK9liTFS59uz8E3BbgeJs9V0vXwClx19TZ3p+sgdfD2au5iT4CHJfu8xWGLrpdwLMijZgR+KB3XJP7h3rq0ShukdZ2jhxl5G1xbK+rlTtKA24T8Ex0EA5vk/qpbd4r5x3lsvursU4jYWqzHq5WNRsfD1bwWJPVLuDUY6WzqpvlrDJW9JlbozxeqWbTGfXW5aKf8MZVCceu6pXd6b2rlWg1mtwuZ5WAWwNcd8pn3u3mxXp2NL2UZof1WfTCSj7XSmU6qY46HqzmiVNf10eVOWc/7KXFGnBrgKNhN396VC/Wv77TnW2ER2WXfHopnX30SwM9rrZKDz7ohcWXd8s2aXI7NthPvr1bLdaA2wP8T/LvmQEGDBgwYMCAAQMGDHiOgf/m21IeUXwJy3/2JSyAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMG/HgByxwH8JwH8JwH8JznL0frBpEF1zzCAAAAAElFTkSuQmCC" /><!-- --></p>
+<p>“Asexual” means “not experiencing sexual attraction”. This does not
+imply anything about romantic or tertiary attraction, as asexual person
+may be aromantic or alloromantic (see “alloace”). Asexual people are
+often nicknamed “aces”. The opposite of “asexual” is “allosexual”,
+i.e. any orientation where a person experiences sexual attraction,
+whether bi-, homo-, hetero- or any other.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;intersex&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABFFBMVEUAAAAAACwAADMAAE0AAFsALDMALFsALIAANSwANU0ANW0ATYAATaMAX4sxAAAxLAAxLFsxTYAxTaMxbaMxbcQ4AAA4NU04X204X4s4hYs4hadXAABXLABXLDNXTQBXbaNXi8RXi+RiAABiNQBiNSxiX01iqadiqcJ5Aqp7LAB7TTN7i8R7p+SKNQCKqaeKzMKcTQCcTTOcbYCci8Scp8Scp+ScwsScwuSvXwCvXyyvX22vhSyvzKevzMKv7cK7bTO7bVu7i1u7i4C7p6O7p+S7wuTShSzShU3SqU3SqW3SzIvSzMLS7cLai1vap4Dap6PawqPawsTawuT1qU31zG31zIv17Yv17af17cL19fX/2AD////F02lAAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD8klEQVR4nO3c7XMTRQCA8aXUokgDrQ0oolAUAeUl9f09vNYKpJArmij////B7t5eSjP54qjN3HPP86G527kPnfvN3m22Mw2vDF1Y9i9g/28Cw0vAf3eoG11KYHgCwxMYnsDwBIYnMDyB4QkMT2B4AsMTGJ7A8ASGJzA8geEJDE9geALDExiewPAEhicwPIHhCQxPYHgCwxMYnsDwBIYnMDyB4QkMT2B4AsMTGJ7A8ASGJzA8geEJDE9geALDExiewPAEhicwPIHhCQxPYHgCwxMYnsDwBIYnMLwGeNqhqi71l8DsBIYnMDyB4QkMT2B4AsMTGB4D+GU/XF8wPPnx10VXL/ueH2tk4L3+SYEZwIvbDQILTE9geAzg+h2cfv7xaQjhwi9x7CDk8rv5SRo9f6dcu/rtTghrt6rq4Udx+K3Lj8u9yKfnvkiHwxC2yuf20mz+k2DA1/pZ9cTdI8A/1Ifh9LN87erH8Xj1u6SXi4epnXJ6KoKPb+bRFx/mszYHAw7v/Dyd/BTCehptHtG7IXzwbDr5rZ+H01XvPR5/Ve33wmbUe9ALZ9KdGKbhanyvPt3PH4OwcmvJQP82GHAt+n39WYDj8Gf5qoM8s+NpPSuHs880WaPolXxHRjVqsh2F2r7NwYAv5tODI8C79aN5muDX81X59Vpgm4azh/Egq8an87s3j1zRzmDA9XZHPVUL8OR2YS/U8ap63TRKC6xH5T7El+5WOSzU+Q29teietSo+8J9Xw2FxYAYcp2psZePrdBwn7GF53kby1q+wqm4DV/fP5sGVK4uAZ1+V2l0ngC/OXXv41Xb8ZfruGwci8JxmXHW1fw3dBeD4Dl6fu/bo3sX9XnwUxwfy3IJ5ENYutX8R3QHg5kvTG9dm4EPSvJwezK2Y4xJsu/37WJ0AftkvU7iey7MZPPuaNEiLqf2y31Hg4yP7TDps/TKLDFw+4hTOu9NPPmk2OmrgaLgWV9DjnXqexjX1xjdV9fBSfvMO889R+6cwGThtSqYF1qTZiz5xffrmO3jUK+Ob6Wzc7EWvbDc7lc2WdJsjA0/3+qFeQf+e/pr09vtPy7XNrHz+eW/2RTj2IP9xaTPtfTSb0KPWf1ViAP+zln3PjzWB4QkMT2B4AsMTGJ7A8BrgZf9jlONs2f8X5Vjzv+zAExiewPAEhicwPIHhCQxPYHgCwxMYnsDwBIYnMDyB4QkMT2B4AsMTGJ7A8ASGJzA8geEJDE9geALDExiewPAEhicwPIHhCQxPYHgCwxMYnsDwBIYnMDyB4QkMT2B4AsMTGJ7A8ASGJzA8geEJDE9geALDExiewPAEhicwPIHhNcAGTmB4AsMTGN5rrgMAy/qSgWsAAAAASUVORK5CYII=" /><!-- --></p>
+<p>A person whose sex characteristics (phenotype, chromosomes, hormonal
+profile, etc.) don’t align, i.e. not all of them belong to the same
+binary sex (male or female). These characteristics don’t have to be
+binary, for most sex characteristic are a spectrum. The opposite of
+“intersex” is “endosex”/“perisex”/“dyadic” (personally I prefer the
+first term).</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;nonbinary&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABF1BMVEUAAAAAADUAADgAAF4AAGIAMDUAMF4AMIQAOGIAOIoAVagAYq8zAAAzMAAzMDUzVV4zVYQzVagzd6gzd8k4AAA4OGI4YmI4Yoo4Yq84itJaAABaMDVaVQBaVTVaVV5ad6had8lalutiAABiODhiYmJiiopiiq9ir9Jir/V/MAB/loR/lsl/tah/teuKOACKYjiKr9KK0vWcWdGgVQCgVTWgdzWgd16gloSglsmgtcmgteug08mg0+uvYgCvYjivijiv0tKv0vWv9fXBdzXBll7BloTBtajB0+vCwsLSijjSr2LSr4rS9fXhll7htYThtajhtcnh06jh08nh0+v1r2L10or10q/18sv19a/19dL19fX/9DD///+euMJhAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD+0lEQVR4nO3c+VMcRRQA4IYoCbLeeCTxiifex8YjXomBBFEWzW6Msvr//x1298zCMGyswl4ZGL/3A0vPW6qgPt7rq2rDX6LXEbr+BcR/G4B7Hgn4z06im7/3s24idBKAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGfD6Bf+8kpp3EpJv4sZOYAgYMGDBgwIABAwYMGPCc+OP1cLkBvDcI1wADBnxegbsJwIABA/7fAP+2HjYevBFCeOGH+snPafTcJ/OyCfjBxyEsv7g7PZiD09dfrsb3PPV1JfDrF0/E0VI13Btc+OZ6CCsfXAnPVul7V8pmbsAnBX5zPd+XLH+axvvf19cn2bCVjcDPHw4PgV8Z5IdLHyaA0WB2A3OtAn4pfnvh22G4uJ2BRnEA+DSBw6Vb0/2bIayl8XeZNjGvHc9G4LD8znT603pY3W0Ah5Ubk/HnITxWFejFWLvjrUGGTNlntsdfRdfKfzLMbwN8esCP3K5k02scVrPsTi7SVjYBb9Q/dbkBXJXkML9uzgp0M4vGbFW59+oeXdqhAZ8YuBK9nwl3atB6PdXKxoeru9MKfHX3EDjLtXvvaAZcZSd1jy7t0IBPDLxRE8aS3f+oatQ1YSvbWEWnf4TGIqshmmN898uXwwy4Lti9QU6XdmjAhcCzfdDOfOBqmMcPA75ztV5kHQUev5tqubhDAy4Bbmx0c7P+N8DDbPvk+1st4Dgpxx5d3KEBlwAvoII344b4xuGwAZx7dHGHBlwIXDgHx0ZcC262gVOPXsD9BOAC4Dmr6Bbw2ox/bToXeLYbSpwt4NSjt4o7NOAi4OP74BZwdd51P+2H/7mCR+1FVlpgLT1e3KEBFwEfP8lqAc89yWrOwcN0cjUZX6/PKo/05GF9fgm4O+BjZ9Et4Leqs+hLt6cPAY49OsfKe/mI4wjwKJR3aMBlwLPbpFvzsmkVnW+T3m7dJjWAY/EOQnj01e2qWR8BPpigAZ8acEGc3KZx1gW4j8AHV4aAewm8tYgCBnxGgUdp5fV0uS/gMwocV1tLry3AF/AZBV5YAAYMGDBgwHOBfQhLzz+EBTBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIDPF7DocQDueQDueQDuefwNV1YGlz+3lhUAAAAASUVORK5CYII=" /><!-- --></p>
+<p>A nonbinary person is somebody whose gender is not one of the two
+binary genders, i.e. woman or man. Usually nonbinary identities fall
+inside the spectrum between masculinity and femininity, but this need
+not be true for any enby (nonbinary person).</p>
+</div>
+<div id="rainbow-variants" class="section level2">
+<h2>Rainbow variants</h2>
+<p>Although the six-stripe rainbow flag is the most recognizable, there
+are other variants, both older and newer. Some try to be more inclusive,
+others raise an awareness of some issue. Below are the implemented
+ones:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;philadelphia&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A 2017 redesign of the 6-stripe rainbow flag adopted first by the
+city of Philadelphia that draws attention to the struggles of people of
+color within the LGBT+ community.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;progress&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A 2018 flag that adds a chevron to the 6-stripe rainbow flag. The
+chevron contains both black and brown colors added to Philadelphia
+rainbow flag, and transgender flag colors (light blue, pink, white).</p>
+</div>
+<div id="sexualities-on-a-spectrum" class="section level2">
+<h2>Sexualities on A-spectrum</h2>
+<p>A lot of orientations in LGBT+ community belong to the A-spectrum,
+whether sexual, romantic or tertiary. Thus, enough flags were spawned to
+justify separating these into their own section.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;aromantic&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABVlBMVEUAAAAAADEAADMAADgAAFcAAFsAAGIAMzMAM4AANTEANVcANXsAODgAOGIAOIoAW6EAXpwAYq8zAAAzMwAzNTEzXlczXnszgKEzgMIzhJwzhLs4AAA4ODg4OGI4YmI4Yoo4Yq84iq84itI9pUJbAABbNTFbXjFbgKFbhJxbocJboeJbqNpiAABiODhiYgBiYjhiYmJiiopiiq9ir/WAMwCANQCAqHuAqLuKOACKYjiKr4qKr9KK0vWh4uKiXgCiXjGihFeiqHuiyruiytqi7NqkpKSn03mvYgCvYjivYoqvijivimKvr4qvr9Kv0tKv0vWv9dKv9fXCgDPCoVvCwsLC4uLDhDHDqFfDqHvDypzD7NrO48/SijjSr2LSr4rS0q/S9fXiwoDi4qHi4sLi4uLjqFfjyrvj7Jzj7Lvj7Nr1r2L10or10q/10tL19a/19dL19fX///8pBbAGAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAEF0lEQVR4nO3c51MTQRzG8R+CWIMmKpazIhbsEqxgRQ02EBFQBEUNCgl65///xi23ISFH0ZlN4Pw+L7K3y+1Mhs/sbbmZyG+S6kizvwDxG4BTHg182m+eeY3n/89TrxG/ARhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAHenMAf/WbBayK/KXrNO7+JAAYYYIABBhhggAEGGGCAAQYY4P8cOHw+qj7LgeQBTiPwTNAOcJqBp8UAuwAMMMAAA/y3+f5wv4i0dA5q4HLQ/mZIJDOgrj9dVu3H+g3Or0uSX7wj0to7G5ny5Kxp//nyqLqp9cRIFNnJdlF3MtWSfc+WX5qDx/aJbDk3DnBDgedy7pXnRQt8RV2qkRcOxc2GUgFfD0w1W7Zlh24uBa5z3gJfsw2tA/XAYZ9t2O5HGODk/OiWXYMLC/OTOWkbNUZyajZ8HUUFQ6uZsxZYMiNReFtsWTCkqrVDDdZwJjAPY905MxyFL2wf94iOgVWXg+PFMZFDADcQeELansQXLQMGwwxNfdEVT6R6OCpKh6Wrut5VNcnam8pBXC/YsgZYfRrZt7L1HsCNA65kzgE719jOUqrPbFwzpRrK2ar1U8kBd8XVeuDpGPZLTi4A3GDg+Q+PzooDzi8DLOgxbZmjSln19/Dzq6vigPNV3rXABdnjwxXgNfP+TLxOWgbcVdnsWOB8ErBZabtl1WrAqgPATQG+b2wP3JqsAXaQjmkF4IKxPd4/sx5gP4srgFfPhEjnY30x9w8jeFpteYdr5mBG8AYDnr8he530GnNwPfDSTdPrn4O/9fmRBjgxaht8xElXAyesouuBK89xVVsT2K2iv3b7eVYDnJjKCJ6rXWQl7INXGcGldayi2Qc3BVivsQ5PLcw/iI8bK0b1J1kJc3BBH3vFh5r5euC4qJxkbekpFsdynGQ1FFg9o0123sxpuiXgurPoBGB9gKmTuRvUdF6SFdXOWXQzgdXgzYnsOD+lHtbZamD3NmnYzcRJ26RwSBnu7p211eXA0UxQBWzfJm3r8cIL8HoS+Y0nWYABBhhggAEGGGCAAQZ4YwPzIywrJxU/wgIwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADvLmASYoDcMoDcMoDcMrzB6IMfZL5GKV5AAAAAElFTkSuQmCC" /><!-- --></p>
+<p>An aromantic person does not experience romantic attraction towards
+anyone.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;alloace&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABGlBMVEUAAAAAADAAADgAAFUAAGIAMDAAMFUAMHcAODgAOGIAOIoAVZYAYq82AAA2MDA2MFU2VVU2VXc2VZY2d5Y2d7U4AAA4OAA4ODg4OGI4YmI4Yoo4Yq84iq84itJhAABhMDBhVTBhd5ZhltNiAABiOABiODhiYjhiiq9ir9Jir/WBAH+JMACJlneJlrWJtdOKOACKr4qKr9KK0vWuVQCuVTCud1WulneutbWutdOu09OvYgCvYjivimKvr4qv0tKv0vWv9fXRdzDRllXRlnfRtZbR09PSijjSimLSr2LSr4rS0q/S0vXS9fXVAQDbwtvswsLzllXztXfztbXz05bz07Xz09P1r2L10or10tL19a/19dL19fX4WFj///+6Mpx+AAAACXBIWXMAAA7DAAAOwwHHb6hkAAADmUlEQVR4nO3cV1cTQRgG4BEbFqzEjgUb2BUrVlAwIipqRE30//8NZ1tIQS40ukvO817k7DB7wdnnfDPfTs5J+ClDnVD2PyD/NoCHPAnwu1Lyo5SU9JivlBLAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAED3pzAH0rJl1LSKifvS0kLMGDAgAEDBgwYMGDAgAEDBrz5gT+OhcniEzBgwIABAwYMGPCf59O9fSGELQcfrgP88kyc2n89B/725Ggcjpx4nj/7+pE4urycj5YuxsljtwFXDHhlLOSZ7AVu3M1nDi0kwKu14s7p5Mk3b2aD3Znw49A1BFwR4M+nw85Yu435sbD1UQ/wTEqbMO+Jo+/nw+5Yu816LWx7EZ/8bAinllv1ECYSh8V01HxdC3sBVwl4LnVNL7bc6AaOn+MdU4uZa2I5cqfV+lorZJM/x9FUOrmaTgKuDHA7K33AbftY5eMdTVZmWHhH2ulkVCzNswMuYcADSOPV/bOhF7hxNV2Zk8yEnQsZcHPp6aWQAndBxv14Ir9cHPAuDPhvk3bKSfqBx/Nb5jLgNxfzOyNwJO0AjvvzWvKVHHA1gGdS2wPX53uBs4U5B46LddJVRdvjt+s58MSaAuDKAs+FcPBBctG3B/dWcOyTTzxLHvnquhU88TshwGUCr220fV10zx7caIsudu3BqXQ3N+DqALfX4ci5cRf9uSjSiNnZRWfFOzvghRnwgNIu05W+JqvnPbhdwath/ffgjoIGXBngpMc6vJAfSk5ueJKVnVw1HxdnlbNhZKrVqufOcTY5o1664KCjWsBx+U2z41parxucRRed8q5bmWn3WXSzOIsemR6oL+C/TePuWAjbzy1ki/W63yalXfaXaFgLYfTycnsVTr5NGp0qJNK35NGTbwfrC/i/ZcBwgAEDBgwYMGDAgAEDHk5gP8Lyz1Puj7AABgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwY8OYCliEO4CEP4CEP4CHPL9uQgPm0l3QnAAAAAElFTkSuQmCC" /><!-- --></p>
+<p>“Alloace” means “experiencing romantic attraction and not
+experiencing sexual attraction”, not specifying the type of romantic
+attraction. “Allo” is a shortening of “alloromantic” and “ace” is a
+nickname for “asexual”.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;aroallo&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAAAolBMVEUAAAAAADgAAGIAODgAOGIAOIoAYq84AAA4ODg4OGI4YmI4Yoo4Yq84iq84itI9pUJiAABiODhiYgBiYjhiiq9ir/WKOACKr4qKr9KK0vWo03mvYgCvYjivimKvr4qvr9Kv0tKv0vWv9dKv9fXO48/SijjSr2LSr4rS0q/S9fXj7NrouwDw58L079H1r2L10or10tL19a/19dL19fX740v///+76ijcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAC10lEQVR4nO3cXW/TMAAFUG9sFBgb46Ow0QFl0EH5KNDA//9rJGnaJqnHm4WbnfsQRdF9qHpkx3GkhD8y6IT//QMkbQAPPBXwk7R5nTSJ/5/fSfM1bQADBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgx4P4E/ps2XpCnS5nvSfEubAjBgwIABAwYMGDBgwIABAwZ8h4B/jMJ4fQQMGDBgwIABAwYcAf755kEI4eDk/Uru8PoqhKPL8vzT0/L6w4t4rQPcbQLOCngxCk3GK+Bn5enhh2J51Vx+PI/VWsC9JuCsgH+dh+NyUC5vRpVqZRZO58t3RTGpwSq8+9HaFrjbBJwX8KwGq08OLmuz43kzCZ+1ru/Wxq1juwk4L+BNFmu5tVYjWo7ds1htAxxvAs4JePn57fPQkiuvvNzMt5NmTO/W6mO0CTgj4HoJXKUHvB6NsxVbpLYG7jUBZwU8qdEeXdx0gFvT7WoKjtXq404TcFbAsxBOpv2b6+4IjtaM4PyBt3fQ2b/uwfGae3D+wJsJtnRqA/fWxvGaVXT+wJvxt+gusnpPt/Ga5+D8gavF0+m82W3svD/o7k9Fa3ay9gC4nFfrHL2qB+IWuLvDHK3Zi94D4JJnFMK9F806qv0GcPWOaHp7rfc2aVoUgPMDThTAgAEDBgwYMGDAgAHfSWAfYbk9g/gIC2DAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAHvF7AMOIAHHsADD+CB5y+ZWnnJYdVSOAAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>“Aroallo” means “experiencing sexual attraction and not experiencing
+romantic one”, regardless of the type of sexual attraction. “Aro” is a
+shortening of “aromantic” and “allo” – of “allosexual”.</p>
+</div>
+<div id="other-sexualities" class="section level2">
+<h2>Other sexualities</h2>
+<p>Even though the chapter says “sexualities”, romantic and tertiary
+orientations belong there as well. Since these sexualities don’t belong
+to A-spectrum, their umbrella term would be “allosexual” (and,
+analogously, “alloromantic”).</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;pansexual&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A pansexual person may be attracted to any person regardless of
+target’s gender. This sexuality differs from “omnisexual” in that this
+attraction is not influenced by gender, does not depend on gender. Also,
+pansexuality’s flag is cooler.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;lesbian_7&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A 7-stripe variant of the lesbian flag.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;gay_7&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAAA7VBMVEUAAAAAADQAADgAAGAAAGIANoIAODgAOGIAOIoAW6oAYKYAYq8HjXAmzqoyAAAyh8g4AAA4OAA4ODg4OGI4YmI4Yoo4Yq84iq84itI9GnhQScxXo+9aAABiAABiODhiYjhiYmJiiopiiq9iitJir9Jir/V7reJ+NgCKOACKYjiKr4qKr9KK0vWY6MGc5O+fYACvYgCvYjivimKvr4qv0tKv0vWv9fXBhzTD3tjJ6+TOx9rSijjSr2LSr4rS0OrS0q/S9fXa5O/gzoLgzqbg8Kbg8Mjg8Oj1r2L10or10q/10tL19a/19dL19fX///+u/9JUAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADhUlEQVR4nO3cWVfTUBQG0GsdQHEAFcUBJ0BFUQFFVFDrAEVp/P8/x5smKUUbdNmwTLr290RJH1jsnJOTE2j4IWOd8L9/ADneAB7zpMDnK8iF0fOsglTwG3lYQW6OnhsVBDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwICbCfymgrwdPbsVJBk9nyrIh9HzroIkgAEDBgwYMGDAgAEDBvyvqqvhIGcBAwbcMOAB6ZPPAY8vcCeEW6P7Aq4r8P58mKrAF/BxAe+sz4RwZWNvurWSen1fvxyvqa3Zjcxurq+4VAK8GlorgOsLvPMoG5PuZ8Cd6WJuWurhTbbzNnzq9XDfvel4EgCuL/CL0FpoJ9vRNQWOlToZa7cbX6einZCVdZSeKi3g+EbAtQX+fDHrvbEQU8utolK3Cu+5ozt0egW26Kgx8GY43e5fSgfg8trNe3R5h85OBMB1BY5X4HOHRNN0P768m3XsJB+9Sjt093HvDABcV+Cvt8OlYljKgN/fyYes3ssIOHdUh46dPT0CuDHAvf1j6+rT7bygt9IKPapD944AbgrwVgizrwY7du/bf+rQgGsL/Ms1OIJNDQ5PWY/O+/CQFFM24LoCx9vgwSm6v7qKrvnMFXv09lFbjiXAtQY+fB/cr+BOKID351szpVuOopEDri1wuslajLNzvsmKM9b1dtJdK3aVSTZ2le2hi70I4PoC57vo1r1iddXLxJPp4jlDLOayDt3fVQOuL3DxNCm/FequxVo+86B9MG4dPFIaBpy9CXBtgftDVum9bufwDnNoANcWeDOcKG6HSiap/iNDwE0EjlP0xEaSfFsuq9PtvyhgwPUFjiWcr54Xh8B10iPXBr4eyBLgRgDvfllOx6ren+j8lvTueCEB3Ghg/9kAGDBgwICbBexDWAYzhh/CAhgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMDNApYxDuAxD+AxD+Axz0+IxCBkp6WifAAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>A 7-stripe variant of the gay flag.</p>
+</div>
+<div id="genders-on-fem-masc-spectrum" class="section level2">
+<h2>Genders on fem-masc spectrum</h2>
+<p>We’ve come to allow a lot of freedom when describing gender, but most
+people can describe their gender using terms of “femininity” and
+“masculinity”. These are the identities that fit in this space:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;demiboy&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABAlBMVEUAAAAAADQAADYAAF0AAGAANDQANF0ANIMANWAANYcAXacAX6szAAAzNQAzNWAzX2AzX6szhc40AAA0NAA0NF00XYM0Xac0g6c0g8haAABaNTZahYdahatahc5aqc5aqfBdAABdNABdNDRdXV1dg4Ndg6ddp8hdp+l/NQB/XzZ/f39/qc5/zPCDNACDXTSDp8iDyOmd1+qgXwCgXzagzM6g7fCnXQCnXTSng12nyOmn6enBhTbBqWDBqYfB7fDExMTIgzTIg13Ip13Ip4PIyKfIyOnI6enb29vhqWDhzIfhzKvh7avh7c7h7fDpp13pyIPpyKfp6afp6cjp6en19fX////cMmmpAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD1klEQVR4nO3ceXMURRgH4M6K1yYeRIX1jHgQ8ABEXcXEE4xBWY6MfP+vYk9377ILVBKHxgnj8/sjsz27W5Wqp953+qjacF8GndD3PyBPN4AHnhb4s17ycy/5qp8ABgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMODjA//RS5peMusnf/cTwIABAwYMGDBgwIAB/3+Bb4e1K8cEvrkRtmazv94OpwEDBvzsAecABgwYMOCnDnzw/RshvHBtAXzjoxDCm5fT63sfhu27l0JY+3SvSdczeyvP4D8vhjB6/adi8OM78Zuvfr6qH19tAe4R+N65kPJxAf4uD8OLexn4k800HN/ZLLeXgF/bSPdGX7QCt74u30zgV8PL2X0/nPoWcI/A07B2vmmuR74E/EsIZ/eag183wzgDx+JuDr4M+ToNYXsJOIw+mM12N7Ll1UTbMq8n18web6/X8AXcMbcjWXuNBdoCx8v5cr8dRuDnfnjwbjueLAOn5huHp+d/Y3YS7bxH1+rQgDtmmntxquQrbQGXYRyPE2hbyItrLOXxEnDpwqkd78xbcaEtPbpWhwbcLa1YfpVKNg4n5Z1E3VZsAZ48BrjMo1rbWxcWrTjT3txIPbpWhwbcLXO5Atw+cxeJzbmdRR8CXJpv+7yNwPNF004CzjeqdWjATwp8Z/OJgJdWxaVZJ+dqHRpwLeDJQ293reDco6t1aMDd8ugzePwvgA97BqcenT8JuD/gB9PmPIue5mXRMYHX56Lrs0dm0amSd6t1aMAdE1e4k3It6+BcwrmWjwDOexn7aT380Do4SY9eqdahAXfNNG1dLXay4vCta01z49x8o+Mw4EN2smb5TrUODbhr0jZk1C170Qfzvei17eZI4HfzXvRLqQ2v7kW3iaVdrUMD7p7fVk+TrrenSc+f+b05GngrnSa9t3qa9M3CpOqBIuD/Ksc3WRw4AB4m8OLIEPAggXdrFjDgEwa8n6Zb9XwBnzDgOBEbvV/RF/AJA64ewIABAwYM+LHAfoRl4D/CAhgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMDPFrAMOIAHHsADD+CB5x8Ln820mk/y5gAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>A person that is partially a man. The other part of their gender may
+or may not include other genders.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;demigirl&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABC1BMVEUAAAAAADQAAF0AAF4AMzQAM14AM4MANDQANF0ANIMAW6cAXac0AAA0NAA0NF00XYM0Xac0g6c0g8g2AAA2MwA2M142W4M2W6c2gKc2gMldAABdNABdNDRdXV1dg4Ndg6ddp8hdp+liAABiWwBiW15igINigMlio8lio+p/f3+DNACDXTSDp8iDyOmJMwCJWzSJxOqnXQCnXTSng12nyOmn6emuWwCuWzSugF6uo8muxOqu5Mmu5OrExMTIgzTIg13Ip13Ip4PIyKfIyOnI6enSgDTSo17So4PS5Orb29vpp13pyIPpyKfp6afp6cjp6en0o170xIP0xKf05Kf05Mn05Or19fX9rcj///8t63B5AAAACXBIWXMAAA7DAAAOwwHHb6hkAAADgUlEQVR4nO3ceVPTQBgH4K14F6/ifYL3rXiLJ4iKIkSUqt//k7jJprUgaJ0RE+Lz+2ezSTvT6TPvZnczk/BNGp1Q9Q+QjQ3ghicHvlJJnlWSr9UEMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEPD/yukmSVpFtNvlQTwIABAwYMGDBgwIAB/9/A70PrxpDAS2Ph8k8Iq06u+RnAgAHXAHiYAAYMGDDgv5DFu3tC2HmvDzxzMoSw93pxvHA8THy4FkLrzGxWtEfmBvCWHx0M4dDU0ljrdu/k0tjIk4chbLsNuC7ACydCkVMl8J3UDbtmE/Dp0aLbnk/t9rk+8PLN9MkLK4HPxVMjTwHXBXgytMazbDryFcDPQzgwmy2+GA3tBByLO1u8GlL7ICTFAu9BaF2c674Zi98cAA7h6NzyY0N0XYDfhzCRt7FAc+DYjJfn824E3nL/x9Xs89lwbMCyIIztCuC8xt2DawM8mcbiopJv5AVcdmO/XQDnhdxv46i8u4f3uqTMK3kQ+FgXcH2A4+DbTkdFycZup7xSUEfYTgncWQWcDvN8XAl8GXCNgHtyJXB+z+0nDs75LHod4DRaJ0vAmwB4fhTwfwHcWXUZ8KYG/vke3B4S2D14UwD/mDanWfRkWhYNARwnz2vPogHXCjiucDtlW66DUwmnWv4V8HrrYMC1Ao41m29d9XeyYnffvSybOdHb6FgXOK/cS93u29U7WYDrBVxsQ0ajci96sbcX3ZrIfgNc7kW3zgOuM3CWvVz5NGk6f5q0Y/+r7HfAvadJH8PIU8A1Bv6DDP7r/UlWAt7IAK4C+HUxMncH1kuAGwUcB+FtU93up1slNOCGAccSLqdjlzbYF3A1wLF44xJp6+GpjfYFXBHwPwtgwIABAwa8JrCXsDT8JSyAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGvLmApcEB3PAAbngANzzfAa12HcQXRtbKAAAAAElFTkSuQmCC" /><!-- --></p>
+<p>A person that is partially a woman. The other part of their gender
+may or may not include other genders.</p>
+</div>
+<div id="other-genders" class="section level2">
+<h2>Other genders</h2>
+<p>…and all the other terms related to gender that do not fit in the
+fem-masc spectrum:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;genderfluid&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>A gender identity which fluctuates over time between feeling
+masculine, feminine, androgynous, and other gender descriptors.
+Fluctuations may be random or regular.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;genderqueer&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>“Genderqueer” is an umbrella for all gender identites that are queer
+in one way or another.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;agender&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABMlBMVEUAAAAAADQAADgAAF0AAGIANDQANF0ANIMAODgAOGIAOIoAXacAYq80AAA0NAA0NDQ0NF00XV00XYM0Xac0g6c0g8g4AAA4OAA4OGI4Yoo4Yq84iq84itJcAABcNABcNDRcXTRcXV1cg4Ncg6dcg8hcp8hcp+liAABiOABiODhiYgBiYmJir9Jir/WBNACBXTSBp4OBp8iByOmKOACKr9KK0vWlXQClXTSlg12lp4OlyMilyOml6emvYgCvYjivijivimKvr9Kv0tKv0vWv9dKv9fW39oS8xMfCwsLGgzTGg13Gp13Gp4PGyKfGyOnG6enSijjSimLSr2LSr4rS0q/S0vXS9fXm89znp13nyIPnyKfnyMjn6afn6cjn6en1r2L10or10q/19a/19dL19fX////JezWqAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAEG0lEQVR4nO3ca1PTUBCA4VOuYqkiSr2LqCAqqHgpKBZURK2IRUEsagvS+P//gntuSQvtMAPFhMy7X8jOyQemz+w5m02n6i+R6lBx/wPE8QbAKQ8NrGKJD7FETB/z+1gCYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBvhkAn+MJWqxRBBP/IglAoABBhhggAEGGGCAAQYY4EMBb6uu5wADDDDAAAMMMMAAN8avubNKqczwvE2rc2eUGprfymWemHx1VFaHZsz1Vk5N/Lkn+eUl+7HXX19UamApBN7Qi5eemeudfM+7BVntDD3Ah41Kzr+dmjC+D21yywHPusX+sgUey5vUgu5O2sUHLl9wN5/etMD35bpnGeA4gX9fV/1Su9WVnOp+JXlBZe6Ua5IpA1xS6kK5Vv2UU1kLrAbeBvVFpQb1p15UXVNBsJ534GtKXd0M6l/zZnUnr9P6m474AnzYKFlXfaFF9SZcs5QuHTerFZ92L1tZXZjbSk0HllIDy58pg7HtU1PJAMcKHIYlLNm92FRyYyp51gCPOEINXPSCRSO6FoIWdQkL8LWO+QJ8pKiuvrhp9mQ5gbMN3pKOuFsMta5vByyi9ad2o45SD2qoBXga4AQAfx51rZGIyonsRE0XLWkUspU3A+/e9aI+jUIKHOBkABeM7bmZlSMA7+QBTiqwtMnDL/VFpTXwSOPNBwE3nbkAJwE4OnRLrc/gbHvg/WfwIMBJAw5rVCx121xo7qIL/iGqFXDUNtsuutg81AA4CcBhjVZUm+fgbMN9e4D9g1D0HGxL2NYywEkA1j2WHlXN+lmlVO64dNZ+kiXLeki9eiPkbwCWmtWjq3CSVbRD6o1J7w1w/MC+Ue57nDObtZtFZ8YscNXPojNafy+wlKoZTLtZdN3Poru0LMCJABZCqdbe22W/Wbu3SRV/+prH5N7zX2otgIPgW/PbpHX9NunUle8BwIkBbo6wyao0t1dRdM4M4BiA7SuH2r4HJIBTAiybcJ80VT8fOWiAUwasJ1u2qRpvcwPAJxtYilc3Xf4LPACnDvigABhggAEGGOAkAbf9nZRjDX6E5b/9CAvAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMM8MkCJlIcAKc8AE55AJzy+AeKQ9f9l2UdLQAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>An agender person is somebody who doesn’t feel connection with any
+gender, who can be described as having no gender.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette_lgbtq</span>(<span class="st">&quot;bigender&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAACZCAMAAADAUBkaAAABL1BMVEUAAAAAADYAADgAAGAAAGIANDYANGAANIcAODgAOGIAOIoAXasAYq81AAA1NAA1NGA1XWA1XYc1Xas1g6s1g844AAA4OAA4OGI4Yoo4Yq84iq84itJeAABeNABeNDZeXWBeg4deg6teg85ep85ep/BiAABiOABiODhiYgBiYmJir9Jir/VtgtGENACEXTaEp86EyPCKOACKr9KK0vWax+ioXQCoXTaog2CoyPCo6fCvYgCvYjivijivimKvr9Kv0tKv0vWv9dKv9fXEeaLKgzbKg2DKp2DKp4fKyKvKyPDK6fDSijjSimLSr2LSr4rS0q/S0vXS9fXWx+jX3Ovg6fDp2uLsp2DsyIfsyKvs6avs6c7s6fDtpc3x4+v1r2L10or10q/19a/19dL19fX////T9BlqAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAEFklEQVR4nO3caVfTQBTG8VsEFUtdkLgvKBUF3LUKxQW1ChYFcSnaKJXW7/8ZnLUhUBY5gdD4f96kN8kLDr/OZHLnnMofkulI2n8A2dsAnPFo4DfJ5mey+ZxoEv73PU42t5MNwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDDDAAAMMMMAAAwwwwAADDHB3An9LNr+STZhoWsnma7L5kmxaAAMMMMAAAwwwwAADDPB/BvzjkgytKZcLUtwt8Ir0PAIYYIDTBN5RAAYYYIAB3jfg73dFcoNVXfpncP3pcZETk8uF3H1z29wVUfU983k5kInfN1V9bsYKNZ+fEemfaQMv6otnH5rPjaD31bS6ugU9wHsMfLIgOobSAdfvmFMy7ICf2FKOVC3wWGBKC7o6ai+OuXra3XxsyQLfUp97XwOcGrDkRsLwXcHoOeCS5K5X9TnLXhE5XQ3rbwuSt8DS/7LVfCYyoIHK0jPeai0EDnxe5MJSq/khMFcbgS6bL5iiUwQuusl5yAP7iVodNbA6jJiba7YM3IAsm+OKyISdjA2wOowbtxVfmpEMcHrAZt7Vo1Z9sLSV6JwWbZeqzhvgi45QA5e9YNmIzrdBy3oIN/zNAKcG7FbRFTk0ZYHVEzgfRkNWlX6hbaj1Iisao80HdqKOSg9qqBv+ZoBTAy6uwTTAEbpZRetZvB39JYgBr97wor6MogY4wNkBbgQAdytwrBeyHXDsmQtw+sA7eAbnNwfe+AweAPhgATs9u0I2q+hSfBVd0vSbAUfLZruKLsebGgCnD2ybVTWJ3oA3vgfbL4Edy+uA/YtQ9B5sh7AdywCnDywdO1nq3KzvZJVETk2G4dxl3+hYC6zGrG5dtTtZZdukXhz13gCnDDxse9GHp8L1vejcVQtc973oXHHjFK2HqmlMu1500/eieyaYog8EcNHsJl3rtJtU80/fWb2b1Df4vsMzWOVjfDdpQe8mHT3/qQVw+sAd015k1eLLK5dtwP41AO87cMUtvNa/IAGcEWA1UR9Wiyo1dbv9foCzBaw3gO2iaqTTVYC7HlgNXrW07tPvRgBnEnjLAAwwwAADDPBBAuZHWHad7vgRFoABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhhggAEGGGCAAQYYYIABBhjg7gImGQ7AGQ/AGQ/AGc9fmA2qiplsLFcAAAAASUVORK5CYII=" /><!-- --></p>
+<p>“Bigender” means a gender identity composed of two genders a person
+feels strong connection with. They may exist simultaneously or fluctuate
+over time. One of the two genders is probably stolen from some agender
+person.</p>
+</div>
+<div id="uncategorized" class="section level2">
+<h2>Uncategorized</h2>
+<p>All the terms that do not fit elsewhere. Currently empty.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
